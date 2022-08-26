@@ -28,7 +28,7 @@ class ApplicationController < Sinatra::Base
       title: params[:title],
       description: params[:description],
       category: params[:category],
-      user_id: 1
+      user_id: params[:user_id]
     )
     task.to_json
   end

@@ -8,14 +8,24 @@ User.create(
     user_name: "Yari"
 )
 
-categories = ["House", "Yard", "Groceries", "Park", "Pet"]
+User.create(
+    user_name: "Austin"
+)
 
-5.times do 
+User.create(
+    user_name: "Remy"
+)
+
+
+categories = ["House", "Yard", "Groceries", "Park", "Pet"]
+users_id = [1, 2, 3]
+
+10.times do 
     Task.create(
         title: Faker::Lorem.sentence(word_count: 1),
         description: Faker::Lorem.sentence,
         category: categories.sample,
-        user_id: 1
+        user_id: users_id.sample
     )
 end 
 puts "✅ Done seeding!"
